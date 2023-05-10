@@ -3,7 +3,7 @@
   "useNx": true,
   "useWorkspaces": true,
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "ignoreChanges": ["**/*.test.ts", "**/*.md"],
   "message": "ci(release): %v [skip ci]",
   "conventionalCommits": true,

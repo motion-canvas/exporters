@@ -1,6 +1,6 @@
 {
   "name": "@motion-canvas/ffmpeg",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An FFmpeg video exporter for Motion Canvas",
   "main": "lib/server/index.js",
   "author": "motion-canvas",
