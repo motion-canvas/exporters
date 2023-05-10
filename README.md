@@ -15,3 +15,27 @@
 # Motion Canvas Exporters
 
 The official exporters for [Motion Canvas](https://motion-canvas.io).
+
+## Installation
+
+1. In an existing Motion Canvas project, install the exporter package:
+   ```sh
+   npm install @motion-canvas/ffmpeg
+   ```
+2. Add the exporter as a plugin in your `vite.config.ts`:
+
+   ```diff
+     import {defineConfig} from 'vite';
+     import motionCanvas from '@motion-canvas/vite-plugin';
+   + import ffmpeg from '@motion-canvas/ffmpeg';
+
+     export default defineConfig({
+       plugins: [
+         motionCanvas(),
+   +     ffmpeg(),
+       ],
+     });
+   ```
+
+3. Pick the exporter in the Video Settings tab:
+   ![Video Settings](./images/video-settings-tab.png)
