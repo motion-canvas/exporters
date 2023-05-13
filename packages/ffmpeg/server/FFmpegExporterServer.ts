@@ -50,11 +50,15 @@ export class FFmpegExporterServer {
     }
 
     // Output settings
+    const size = {
+      x: Math.round(settings.size.x * settings.resolutionScale),
+      y: Math.round(settings.size.y * settings.resolutionScale),
+    };
     this.command
       .output(path.join(this.config.output, `${settings.name}.mp4`))
       .outputOptions(['-pix_fmt yuv420p', '-shortest'])
       .outputFps(settings.fps)
-      .size(`${settings.size.x}x${settings.size.y}`);
+      .size(`${size.x}x${size.y}`);
     if (settings.fastStart) {
       this.command.outputOptions(['-movflags +faststart']);
     }
