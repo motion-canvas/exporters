@@ -55,8 +55,8 @@ export class FFmpegExporterServer {
       y: Math.round(settings.size.y * settings.resolutionScale),
     };
     this.command
-      .output(path.join(this.config.output, `${settings.name}.mp4`))
-      .outputOptions(['-pix_fmt yuv420p', '-shortest'])
+      .output(path.join(this.config.output, `${settings.name}.webm`))
+      .outputOptions(['-pix_fmt yuva420p', '-shortest'])
       .outputFps(settings.fps)
       .size(`${size.x}x${size.y}`);
     if (settings.fastStart) {
